@@ -134,6 +134,76 @@
      </div>
 
      <!-- Password strength validation with js -->
-      
-</body>
+      <script>
+        const infoBox = document.querySelector("input#password - span", ":after");
+        const dataset = infoBox.dataset;
+        const passwdBox = document.querySelector("input#password");
+        passwdBoxConfirm = document.querySelector("input#confirm-password");
+        dataset.content = 
+        "- At least 2 numbers\n- At least 10 characters\n- At least 2 uppercase letters\n- At least 2 lowercase letters\n- At least 2 special characters\n-";
+
+        passwdBox.addEventListener("input", (e) => {
+            const value = passwdBox.value;
+            dataset.content = "";
+
+            if (!value.match(/(?=(?:.*\d){2,}).*/)) {
+                dataset.content = dataset.content + "- At least 2numbers\n";
+            }
+            if (!value.match(/(?=^.{10,}$)/)) {
+                dataset.content = dataset.content + "- At least 10 characters\n";
+            }
+            if (!value.match(/(?=(?:.*[A-Z]){2,}).*/)) {
+                dataset.content = dataset.content + "- At least 2 uppercase letters\n";
+            }
+            if (!value.match(/?=(?:.*[a-z]{2,}).*/)) {
+                dataset.content = dataset.content + "- At least 2 lowercase letters\n";
+            }
+            if (!value.match(/(?=(?:.*[!@#$%^&*()_+\[\]{};':\\|,.\/?]){2,}).*/)) {
+                dataset.content = dataset.content + "- At least 2 special characters\n";
+            }
+        });
+
+        passwdBoxConfirm.addEventListener("input", (e) => {
+            if (passwdBox.value == passwdBoxConfirm.value) {
+                passwdBoxConfirm.setCustomValidity("");
+            } else {
+                passwdBoxConfirm.setCustomValidity("Passwords do not match.");
+            }
+        });
+      </script>
+      <a
+      style="
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      color: black;
+      background-color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: sans-serif;
+      padding: 2px;
+      border: thin solid black;
+      text-decoration: underline;
+      "
+      >
+            Imprint
+        </a>
+        <span
+        styles="
+        z-index: 1000;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        color: black;
+        background-color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: sans-serif;
+        padding: 2px;
+        border: thin solid black;
+        "
+        >
+            Not a commercial site, only for educational purposes.
+        </span>
+    </body>
 </html>
