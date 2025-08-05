@@ -93,3 +93,66 @@ a:active {
 
 /* Form slide */
 
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    width: 100%;
+}
+
+#form #user-input p,
+#form button[form="user-input"],
+#form #user-input input,
+#form #user-input label {
+    color: var(--dark-color);
+    background-color: var(--text-color);
+}
+
+#form > * {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#form p:first-child {
+    max-width: 60ch;
+}
+
+#form #user-input {
+    background-color: var(--text-color);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: calc(4rem - 10px);
+    margin-right: 10px;
+    box-shadow: 10px 10px 0px 0px var(--color-5);
+}
+
+#form #user-input div.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem max(min(8rem, 10%), 2rme);
+}
+
+#form #user-input > *:not(:first-child) {
+    margin-top: 2rem;
+}
+
+#form #user-input div.row div {
+    position: relative;
+}
+
+#form #user-input p:first-child {
+    font-size: 2.2rem;
+}
+
+#form #user-input p:nth-child(2),
+#form #user-input fiv.checkbox {
+    font-size: 0.5rem;
+}
+
+/* User Input */
+
