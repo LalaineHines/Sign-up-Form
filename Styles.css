@@ -76,3 +76,20 @@ a:active {
 
 /* Logo slide */
 
+#sidebar {
+    background: left / cover url(./Pics/Picture.webp) rbg(80, 25, 90) no-repeat;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    margin-top: calc(100vh / 4);
+    text-align: center;
+    padding: 0.5rem 2rem;
+    background-color: var(--dark-color-transparent);
+    color: var(--dark-color);
+}
+
+/* Form slide */
+
