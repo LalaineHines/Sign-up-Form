@@ -156,3 +156,29 @@ a:active {
 
 /* User Input */
 
+#form #user-input div.row input {
+    margin: 0;
+    appearance: none;
+    padding: 1.3rem 0.7rem 0.3rem 0.7rem;
+    border: 2px solid var(--dark-color);
+    width: 20rem;
+    outline: none;
+    line-height: 0em;
+    box-shadow: 5px 5px var(--color-3);
+}
+
+#form #user-input div.row input:hover {
+    background-color: var(--color-4);
+}
+
+#form #user-input div.row input:focus {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
+
+#form #user-input div.row input:focus + label {
+    color: var(--text-color);
+}
+
+/* Label */
+
