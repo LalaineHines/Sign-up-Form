@@ -25,3 +25,54 @@ body {
 
 /* font and link style */
 
+::selection {
+    background-color: var(--color-3);
+}
+
+a {
+    color: var(--text-color);
+    border: 2px solid transparent;
+    outline: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--dark-color);
+    background-color: var(--text-color);
+    border: 2px solid var(--text-color);
+    text-decoration: none;
+}
+
+a:active {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
+
+#vortex {
+    font-size: 7rem;
+    line-height: 1.1rem;
+    margin: 0;
+    font-family: 'Monoton', sans-serif;
+}
+
+#logo > p.text-mono {
+    font-size: 3rem;
+    line-height: 1.1rem;
+}
+
+.text {
+    font-family: 'Space grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.text-mono,
+.text-mono#user-input input {
+    font-family: 'Space Mono', sans-serif;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/* Logo slide */
+
