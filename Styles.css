@@ -182,3 +182,53 @@ a:active {
 
 /* Label */
 
+#form #user-input div.row label {
+    line-height: 1em;
+    position: absolute;
+    top: 0.3rem;
+    left: 0.7rem;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+    background-color: transparent;
+}
+
+/* Span */
+
+#form #user-input div.row input ~ span::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    padding: 0.3rem;
+    border: 2px solid var(--dark-color);
+    transform: translate(10px, -10px);
+}
+
+#form #user-input div.row input:valid:not(:placeholder-shown) ~ span::before {
+    content: "Valid";
+    background-color: var(--color-5);
+}
+
+#form #user-input div.row input:focus:invalid ~ span::before {
+    content: "Invalid";
+    background-color: var(--color-1);
+}
+
+#form #user-input div.row input#password ~ span::after {
+    position: absolute;
+    display: block;
+    white-space: pre;
+    top: 0;
+    right: 0;
+    padding: 0.3rem;
+    border: 2px solid var(--dark-color);
+    transform: translate(-20rem, -10px);
+    background-color: var(--color-1);
+}
+
+#form #user-input div.row input#password:focus:invalid ~span::after {
+    content: attr(data-content);
+}
+
+/* Checkbox */
+
