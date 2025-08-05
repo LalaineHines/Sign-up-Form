@@ -282,3 +282,23 @@ a:active {
 }
 
 /* Button */
+
+#form button[form="user-input"] {
+    appearance: none;
+    width: 15rem;
+    padding: 0.7rem;
+    margin-left: 4rem;
+    border: 2px solid var(--text-color);
+    outline: none;
+    box-shadow: 5px 5px var(--color-2);
+}
+
+#form button[form="user-input"]:hover {
+    background-color: #dfdfdf;
+}
+
+#form button[form="user-input"]:active,
+#form button[form="user-input"]:focus {
+    background-color: var(--dark-color);
+    color: var(--text-color);
+}
